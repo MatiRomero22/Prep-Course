@@ -178,7 +178,7 @@ function esPositivo(numero) {
   //Si el número es 0, devuelve false
   if(numero > 0) return "Es positivo";
   else if( numero < 0)return "Es negativo";
-  else if(numero === 0)return false;
+  else return false;
 }
 
 function agregarSimboloExclamacion(str) {
@@ -245,7 +245,8 @@ function esVocal(letra){
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
   if( letra.length > 1 ) return "Dato incorrecto";
-  if( letra === "a"|| letra ==="e"|| letra === "i"|| letra === "o"|| letra === "u" ){
+  let vocal = ["a","e","i","o","u"]
+  if( vocal.includes(letra) ){
     return "Es vocal";
   }else{
     return "Dato incorrecto";
@@ -292,3 +293,4 @@ module.exports = {
   deEuroAdolar,
   esVocal,
 };
+ 
